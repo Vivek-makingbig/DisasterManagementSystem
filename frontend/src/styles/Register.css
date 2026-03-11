@@ -1,0 +1,100 @@
+/* Full page center alignment */
+.signup-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+}
+
+/* Form box */
+.signup-container > div {
+  width: 380px;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text */
+.signup-container p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Labels */
+.signup-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Inputs */
+.signup-container input[type="text"],
+.signup-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.signup-container input:focus {
+  outline: none;
+  border-color: #3f51b5;
+}
+
+/* Links */
+.signup-container a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons container */
+.clearfix {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.cancelbtn,
+.signupbtn {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Cancel button */
+.cancelbtn {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* Signup button */
+.signupbtn {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.signupbtn:hover {
+  background-color: #303f9f;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signup-container > div {
+    width: 90%;
+  }
+}

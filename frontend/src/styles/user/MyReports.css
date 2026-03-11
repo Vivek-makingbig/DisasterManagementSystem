@@ -1,0 +1,60 @@
+.my-reports {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* report card */
+
+.report {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border-left: 5px solid;
+  background: #f9fafb;
+}
+
+.report strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.report p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+/* status colors */
+
+.report.verified {
+  border-color: #2563eb;
+}
+
+.report.progress {
+  border-color: #f59e0b;
+}
+
+.report.resolved {
+  border-color: #22c55e;
+}
+
+/* scrollbar */
+
+.report-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.report-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}

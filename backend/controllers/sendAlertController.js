@@ -1,0 +1,26 @@
+const  sendAlert= require('../models/admin/sendAlert'); 
+
+// Create a new alert
+const createAlert = async (req, res) => {
+    try {
+        const { alertMessage } = req.body;
+        const newAlert = await sendAlert.create({ alertMessage });
+        res.status(201).json(newAlert);
+    } catch (error) {
+        console.log("Error occured while creating alert message")
+        res.status(500).json({ error: error.message });
+    }
+};
+
+// Get all alerts
+const getAllAlerts = async (req, res) => {
+    try {
+        const alerts = await sendAlert.find().sort({ createdAt: -1 }); // Newest first
+        res.status(200).json(alerts);
+    } catch (error) {
+        console.log("Error occured while displaying the alert messages")
+        res.status(500).json({ error: error.message });
+    }
+};
+
+module.exports = {createAlert,getAllAlerts};

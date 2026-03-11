@@ -1,0 +1,35 @@
+#disaster-type,
+#location,
+#file
+{
+    height: 28px;
+    
+  
+}
+#disaster-type,
+#location,
+#describe-situation {
+  background-color: #f9fafb;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+#describe-situation {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;   /* allows only vertical resizing */
+  box-sizing: border-box;
+}
+
+#submit-button {
+ background-color: #f97316;
+  color: white;
+  border: none;
+}
+
+#submit-button:hover {
+  background-color: #ea580c;
+}

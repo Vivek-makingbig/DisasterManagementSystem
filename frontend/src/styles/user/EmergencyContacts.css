@@ -1,0 +1,85 @@
+.emergency-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+/* scroll container */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* card */
+
+.contact {
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* text */
+
+.contact h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact p {
+  margin: 5px 0 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* colors */
+
+.contact.police {
+  background: #2563eb;
+}
+
+.contact.fire {
+  background: #ef4444;
+}
+
+.contact.ambulance {
+  background: #22c55e;
+}
+
+.contact.disaster {
+  background: #f59e0b;
+}
+
+.contact.medical {
+  background: #06b6d4;
+}
+
+.contact.women {
+  background: #ec4899;
+}
+
+.contact.child {
+  background: #8b5cf6;
+}
+
+.contact.traffic {
+  background: #64748b;
+}
+
+/* scrollbar */
+
+.contact-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contact-grid::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
