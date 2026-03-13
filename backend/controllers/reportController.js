@@ -60,9 +60,51 @@ const getMyReports = async (req, res) => {
   }
 };
 
+// Update report status(Admin)
+const updateReportStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const updatedReport = await ReportDisaster.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedReport) {
+      return res.status(404).json({ message: "Report not found" });
+    }
+
+    res.status(200).json({ message: "Report Status updated", updatedReport });
+  } catch (error) {
+    res.status(500).json({ message: "Error updating status", error: error.message });
+  }
+};
+
+//Delete report(Admin)
+const deleteReport = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedReport = await ReportDisaster.findByIdAndDelete(id);
+
+    if (!deletedReport) {
+      return res.status(404).json({ message: "Report not found" });
+    }
+
+    res.status(200).json({ message: "Report deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting report", error: error.message });
+  }
+};
+
+
 
 module.exports = {
   createReport,
   getAllReports,
-  getMyReports
+  getMyReports,
+  updateReportStatus,
+  deleteReport
 };

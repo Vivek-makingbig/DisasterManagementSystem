@@ -24,6 +24,7 @@ app.use(cors({
 );
 
 
+
 //Routing
 app.use('/auth',authRoutes);
 app.use('/report',reportRoutes);

@@ -4,7 +4,9 @@ const router = express.Router();
 const {
   createReport,
   getAllReports,
-  getMyReports
+  getMyReports,
+  updateReportStatus,
+   deleteReport 
 } = require("../controllers/reportController");
 
 const {authMiddleware} = require("../controllers/auth-controller");
@@ -17,5 +19,11 @@ router.get("/all", authMiddleware, getAllReports);
 
 // Logged in user can see their reports
 router.get("/myreports", authMiddleware, getMyReports);
+
+//Admin can update the report status
+router.patch("/updatereport/:id",authMiddleware,updateReportStatus);
+
+//Admin can delete the report
+router.delete("/deletereport/:id",authMiddleware, deleteReport);
 
 module.exports = router;

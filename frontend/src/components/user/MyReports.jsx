@@ -1,38 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/user/MyReports.css";
+import {getmydisasterReport} from '../../api';
 
 function MyReports() {
+  const [reports,setreports] = useState([]);
+  const[loading,setloading] = useState(true);
+  const[error,seterror] = useState(null);
+  useEffect(()=>
+  {
+    const fetchReports = async()=>
+    {
+      try
+      {
+        setloading(true);
+        const response = await getmydisasterReport();
+        setreports(response.data || response);
+      }
+      catch(err)
+      {
+        seterror("Error occured while displaying reports");
+        console.log(err.message);
+      }
+      finally
+      {
+        setloading(false);
+      }
+    }
+    fetchReports();
+  },[])
   return (
     <div className="card my-reports">
 
       <h3>My Reports</h3>
 
       <div className="report-list">
-
-        <div className="report verified">
-          <strong>Flood</strong>
-          <p>Status: Verified</p>
+       {reports.length>0?(
+        reports.map((report)=>(
+       <div key={report.id || report._id} className="report">
+          <strong>{report.disasterType}</strong>
+          <p>{report.location}</p>
+          <p>{report.createdAt}</p>
+          <p>{report.status}</p>
         </div>
-
-        <div className="report progress">
-          <strong>Fire</strong>
-          <p>Status: Rescue Team Assigned</p>
-        </div>
-
-        <div className="report resolved">
-          <strong>Accident</strong>
-          <p>Status: Situation Resolved</p>
-        </div>
-
-        <div className="report progress">
-          <strong>Landslide</strong>
-          <p>Status: Authorities Investigating</p>
-        </div>
-
-        <div className="report verified">
-          <strong>Water Logging</strong>
-          <p>Status: Verified by Response Team</p>
-        </div>
+        ))) : (<p>No report found</p>)
+}      
 
       </div>
 
@@ -41,3 +52,4 @@ function MyReports() {
 }
 
 export default MyReports;
+

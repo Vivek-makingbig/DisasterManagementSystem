@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import {createAlert} from '../../api';
 
 function SendAlert() {
+  const [alertMessage,setAlertMessage] = useState("");
+  const handleAlertMessage = async (e) => {
+    e.preventDefault();
+    try
+    {
+       const res = await createAlert({alertMessage});
+       alert("Alert message sent");
+       console.log(res);
+       setAlertMessage("");
+    }catch(err)
+    {
+      alert('Error occured while sending alert message');
+      console.log(err.message);
+    }
+
+    
+  }
   return (
     <div className="card">
 
       <h3>Send Emergency Alert</h3>
 
-      <form>
+      <form onSubmit={handleAlertMessage}>
 
-        <textarea placeholder="Write emergency alert message"></textarea>
+        <textarea value={alertMessage}
+          onChange={(e) => setAlertMessage(e.target.value)} placeholder="Write emergency alert message"></textarea>
 
-        <button type="submit">Send Alert</button>
+        <button type="submit"  >Send Alert</button>
 
       </form>
 

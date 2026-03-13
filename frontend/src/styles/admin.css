@@ -72,10 +72,11 @@ body {
   grid-column: 1 / -1;
 }
 
+
 /* cards */
 
 .card {
-  background: white;
+  background: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #e5e7eb;
@@ -221,4 +222,64 @@ textarea {
   padding: 15px;
   background: white;
   border-top: 1px solid #e5e7eb;
+}
+
+
+
+
+/* Layout alignment for the item */
+.notice-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.report-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.report-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.resolve-btn {
+  background: #2563eb; /* Matches your blue theme */
+  color: white;
+}
+
+.resolve-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn {
+  background: #fee2e2; /* Light red background */
+  color: #ef4444;      /* Dark red text */
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* Status variants (Expanding your existing .status) */
+.status.resolved {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* Ensure the scrollable container handles the new height */
+.notice-container {
+  max-height: 400px; /* Increased slightly for better visibility */
+  overflow-y: auto;
 }

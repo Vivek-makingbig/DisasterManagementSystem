@@ -1,13 +1,23 @@
 import React from "react";
 import "../../styles/user/Topbar.css";
+import {logout} from '../../api';
+import {useNavigate} from "react-router-dom"
 
 function Topbar() {
+const navigate = useNavigate();
 
-  const handleLogout = () => {
-    console.log("Logout clicked");
-    // later you can clear token and redirect
-  };
-
+ const handleLogout = async (e) => {
+     e.preventDefault();
+     try{
+        logout();
+        navigate("/");  
+         }
+     catch(err)
+     {
+       alert("Error occured while logging out");
+       console.log(err.message);
+     }
+    }
   return (
     <div className="topbar">
 

@@ -25,6 +25,7 @@ const reportDisasterSchema = new mongoose.Schema({
 
   status: {
     type: String,
+    enum: ["Pending", "In progress", "Team assigned", "Resolved"], 
     default: "Pending"
   }
 
