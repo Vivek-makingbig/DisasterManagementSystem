@@ -5,7 +5,7 @@ const User = require('../models/auth/User');
 //Register user
 const registerUser = async(req,res)=>
 {
-    const {userName,email,password} = req.body;
+    const {userName,email,password,district} = req.body;
     try
     {
         // Check whether an user exits or not with the given user email
@@ -26,7 +26,8 @@ const registerUser = async(req,res)=>
             {
                 userName,
                 email,
-                password : hashPassword
+                password : hashPassword,
+                district
             }
         );
         await newUser.save();
@@ -78,7 +79,8 @@ const loginUser = async (req,res)=>
         id: checkUser._id,
         role : checkUser.role,
         email : checkUser.email,
-        userName : checkUser.userName
+        userName : checkUser.userName,
+        district : checkUser.district,
        },
        "CLIENT_SECRET_KEY",
        {expiresIn : "10m"}
@@ -95,6 +97,7 @@ const loginUser = async (req,res)=>
                 role : checkUser.role,
                 id : checkUser._id,
                 userName : checkUser.userName,
+                district : checkUser.district
             } ,
         }
       );

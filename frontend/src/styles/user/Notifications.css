@@ -3,19 +3,16 @@
   flex-direction: column;
 }
 
-/* scroll container */
-
 .notification-feed {
   display: flex;
   flex-direction: column;
   gap: 15px;
-
   max-height: 250px;
   overflow-y: auto;
   padding-right: 6px;
 }
 
-/* single notification */
+
 
 .notification {
   display: flex;
@@ -23,7 +20,7 @@
   align-items: flex-start;
 }
 
-/* colored dot */
+
 
 .dot {
   width: 10px;
@@ -32,7 +29,7 @@
   margin-top: 5px;
 }
 
-/* message */
+
 
 .message p {
   margin: 0;
@@ -44,9 +41,9 @@
   color: #777;
 }
 
-/* types */
 
-.notification.warning .dot {
+
+ .notification.warning .dot {
   background: #f59e0b;
 }
 
@@ -58,13 +55,13 @@
   background: #2563eb;
 }
 
-/* scrollbar */
 
-.notification-feed::-webkit-scrollbar {
+
+ .notification-feed::-webkit-scrollbar {
   width: 6px;
 }
 
 .notification-feed::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 4px;
-}
+} 

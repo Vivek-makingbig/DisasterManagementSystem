@@ -59,6 +59,9 @@ body {
 .grid-container > :first-child {
   grid-column: 1 / -1;
 }
+.grid-container > :last-child{
+  grid-column: 1 / -1;
+}
 
 .card {
   background: white;

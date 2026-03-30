@@ -22,8 +22,8 @@ const navigate = useNavigate();
     <div className="topbar">
 
       <div className="welcome">
-        <h3>Welcome to Disaster Management Dashboard</h3>
-        <p>Report incidents and stay updated with emergency alerts.</p>
+        <h3>Logo</h3>
+        <h2>Report incidents and stay updated with emergency alerts.</h2>
       </div>
 
       <button className="logout-btn" onClick={handleLogout}>

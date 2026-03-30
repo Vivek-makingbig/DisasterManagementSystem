@@ -18,6 +18,26 @@
   height: 4vw;
 }
 
+
+.Navbar-items {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: 35vw;
+  padding: 0;
+}
+
+.Navbar-items li {
+  font-family: 'Times New Roman', Times, serif;
+  color: #363535;
+  cursor: pointer;
+  position: relative;
+  font-size: x-large;
+}
+
+.Navbar-items li:hover {
+  color: black;
+}
 .nav-links a{
   margin-left:20px;
   text-decoration:none;
@@ -35,10 +55,19 @@
 }
 
 
+/* Logo image  */
+#logo{
+  display: flex;
+  height: 6vw;
+  width: 10vw;
+  opacity: 20;
+}
+
+
 
 /* hero */
 
-.hero{
+ .hero{
   text-align:center;
   padding:80px 20px;
   background:#1e293b;
@@ -56,7 +85,7 @@
   margin-bottom:25px;
 }
 
-/* buttons */
+
 
 .hero-buttons{
   display:flex;
@@ -82,7 +111,11 @@
   padding:12px 20px;
   border-radius:6px;
   text-decoration:none;
-}
+} 
+
+
+
+
 
 /* features */
 
@@ -127,13 +160,69 @@
   background:#fef3c7;
   padding:15px;
   border-radius:6px;
-}
+} 
+
 
 /* footer */
-
+/* 
 .landing-footer{
   text-align:center;
   padding:20px;
   background:#1e293b;
   color:white;
+} */
+
+.landing-footer {
+  background: #1f2a3a; /* matches your hero section */
+  color: #ccc;
+  padding: 1.5rem 2rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-left h3 {
+  color: #ff7a1a; /* same orange as buttons */
+  margin-bottom: 0.5rem;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.3rem 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer-links a:hover {
+  color: #ff7a1a;
+}
+
+.footer-contact p {
+  margin: 0.3rem 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #aaa;
 }

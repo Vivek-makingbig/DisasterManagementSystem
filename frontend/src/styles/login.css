@@ -1,19 +1,44 @@
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f9;
+
+/* Full-width heading */
+#Welcome_login {
+  color: black;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+   margin-left: 24vw;
+    position: relative;
 }
 
-/* Login container */
+/* Back to home button */
+#back_to_home {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #04aa6d;
+  color: #ffffff;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 7.9vw;
+}
+
+#back_to_home:hover {
+  background-color: #039f63;
+}
+
+/* Login card */
 .login-container {
   width: 360px;
   padding: 24px;
-  margin: 100px auto;
+  margin: 60px auto;
   background-color: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-left: 32vw;
 }
 
 /* Labels */
@@ -27,44 +52,47 @@ body {
 /* Inputs */
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 91%;
   padding: 10px 12px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 14px;
-  box-sizing: border-box;
   outline: none;
+  transition: 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
   border-color: #04aa6d;
+  box-shadow: 0 0 4px rgba(4, 170, 109, 0.3);
 }
 
-/* Button */
+/* Login button */
 button {
-  width: 100%;
-  padding: 12px;
-  background-color: #04aa6d;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
+    width: 44%;
+    padding: 12px;
+    background-color: #04aa6d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 7vw;
+    height: 2.5vw;
 }
 
 button:hover {
-  opacity: 0.9;
+  background-color: #039f63;
 }
 
-/* Cancel button (if used later) */
+/* Cancel button (if used) */
 .cancelbtn {
   background-color: #f44336;
 }
 
-/* Forgot password text */
+/* Password text */
 span.psw {
   display: block;
   margin-top: 12px;
@@ -72,10 +100,14 @@ span.psw {
   font-size: 13px;
 }
 
-/* Mobile responsive */
+/* Responsive */
 @media (max-width: 480px) {
   .login-container {
     width: 90%;
-    margin: 60px auto;
+    margin: 40px auto;
+  }
+
+  #Welcome_login {
+    font-size: 1.4rem;
   }
 }

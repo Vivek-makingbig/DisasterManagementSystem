@@ -22,6 +22,11 @@ const UserSchema = new mongoose.Schema(
             required : true,
             trim : true
         },
+        district : {
+            type : String,
+            required : true
+
+        },
         role :
         {
             type : String,

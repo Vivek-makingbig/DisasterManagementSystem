@@ -1,3 +1,11 @@
+#Welcome_register {
+  color: black;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+   margin-left: 28vw;
+  position: relative;
+}
 /* Full page center alignment */
 .signup-container {
   width: 100%;
@@ -6,6 +14,8 @@
   justify-content: center;
   align-items: center;
   background-color: #f5f7fa;
+  margin-left: 15vw;
+  margin-top: -2.5vw;
 }
 
 /* Form box */
@@ -34,8 +44,9 @@
 
 /* Inputs */
 .signup-container input[type="text"],
-.signup-container input[type="password"] {
-  width: 100%;
+.signup-container input[type="password"],
+.signup-container select[type="text"] {
+  width: 91%;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 6px;
@@ -78,18 +89,24 @@
 
 /* Cancel button */
 .cancelbtn {
-  background-color: #9e9e9e;
-  color: white;
+     background-color: #04aa6d;
+    color: white;
+    width: 20vw;
+    margin-left: 1vw;
+}
+.cancelbtn:hover{
+  background-color: #039f63;
 }
 
 /* Signup button */
 .signupbtn {
-  background-color: #3f51b5;
+  background-color: #04aa6d;
   color: white;
+  margin-left: 2vw;
 }
 
 .signupbtn:hover {
-  background-color: #303f9f;
+  background-color: #039f63;
 }
 
 /* Responsive */

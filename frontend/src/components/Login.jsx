@@ -6,7 +6,9 @@ import {useNavigate} from "react-router-dom"
 
 
 
+
 function Login({setRole}) {
+  
   const [email,setemail] = useState("");
    const [password,setpassword] = useState("");
    const navigate = useNavigate();
@@ -35,7 +37,9 @@ function Login({setRole}) {
   };
 
   return (
-  
+  <>
+     
+      <h1 id="Welcome_login">Welcome to disaster relief</h1>
     <form className="login-container" onSubmit={handleSubmit}>
 
   <div >
@@ -47,10 +51,13 @@ function Login({setRole}) {
 
     <button type="submit">Login</button>
    
+<button id="back_to_home"onClick={()=>navigate("/")}>Back to Home</button>
   </div>
 
   
 </form>
+
+</>
 
   );
 }

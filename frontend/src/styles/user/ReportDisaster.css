@@ -2,7 +2,7 @@
 #location,
 #file
 {
-    height: 28px;
+    height: 30px;
     
   
 }
@@ -12,6 +12,11 @@
   background-color: #f9fafb;
   color: #111827;
   border: 1px solid #d1d5db;
+  
+}
+#location{
+  width: 90.3vw;
+  height: 13px;
 }
 
 #describe-situation {
@@ -22,12 +27,14 @@
   border-radius: 6px;
   resize: vertical;   /* allows only vertical resizing */
   box-sizing: border-box;
+  margin-top: -1vw;
 }
 
 #submit-button {
  background-color: #f97316;
   color: white;
   border: none;
+  margin-left: 25vw;
 }
 
 #submit-button:hover {

@@ -36,18 +36,18 @@ function DisasterFeed() {
 
       <div className="notice-list">
 
-        <div className="notice warning">
+        {/* <div className="notice warning"> */}
           {alerts.length>0?(
         alerts.map((alert)=>(
-       <div key={alert.id || alert._id} >
-          <strong>{alert.alertMessage}</strong>
+       <div   key={alert.id || alert._id} >
+          <strong className="notice">{alert.alertMessage}</strong>
         </div>
-        ))) : (<p>No alert message found</p>)
+        ))) : (<p className="notice">No alert message found</p>)
 }
 
         
 
-      </div>
+      {/* </div> */}
 
     </div>
     </div>
